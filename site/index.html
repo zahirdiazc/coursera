@@ -7,54 +7,192 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="testimonios">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="layer"></div>
-              <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="imgBx">
-                  <img id="img1" src="luis.jpg">
-                </div>
-                <div class="details">
-                  <h2>Luis Descalzo<br><span>Gerente de Recursos Humanos</spam></h2>
+    <audio autoplay>
+      <source src="donna.mp3" type="audio/mp3">
+
+    </audio>
+    <header>
+      <a contenteditable="true" href="#" class="logo">Florecita</a>
+      <div class="toggle"></div>
+      <ul>
+        <li><a href="#">Inicio</a><li>
+        <li><a href="#">Acerca de mi</a><li>
+        <li><a href="#">Productos</a><li>
+        <li><a href="#">Opiniones</a><li>
+      </ul>
+    </header>
+    <section class="banner">
+      <div class="textBx">
+        <h6>Bienvenidos!<br><span></span></h6>
+        <h7>FLORECITA</h7><br>
+        <a href="#" class="btn">Sobre mi</a>
+      </div>
+    </section>
+    <section class="sobremi">
+      <div class="heading">
+        <h2>Acerca de</h2>
+      </div>
+      <div class="info">
+        <div class="infoBx w50">
+          <h2>Florecita</h2>
+          <p>Mi pasión es aprender nuevas cosas en plataformas e-learning, la mayoría de cosas sobre tecnología que se ahora las aprendí por ser autodidacta.<br><br>Estoy a pocos pasos de volverme un programador, paso mi tiempo aprendiendo nuevos lenguajes de progrmación como Python, CSS, Javascript, entre otros.</p>
+        </div>
+        <div class="w50">
+          <video src="videofile.ogg" autoplay poster="posterimage.jpg">
+
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="sliders1" id="sliders1">
+      <div class="heading">
+        <h2>Ellas opinan de nosotros</h2>
+      </div>
+      <div class="testimonios">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <div class="details">
+                    <h2><span>Betty</span></h2>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="layer"></div>
-              <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="imgBx">
-                  <img src="min.jpg">
-                </div>
-                <div class="details">
-                  <h2>Luis Descalzo<br><span>Gerente de Recursos Humanos</spam></h2>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <div class="details">
+                    <h2><span>Betty</span></h2>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card">
-              <div class="layer"></div>
-              <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="imgBx">
-                  <img src="min.jpg">
-                </div>
-                <div class="details">
-                  <h2>Luis Descalzo<br><span>Gerente de Recursos Humanos</spam></h2>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <div class="details">
+                    <h2><span>Betty</span></h2>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <script type="text/javascript">
+    // Cantidad de copos de nieve
+    var snowMax = 50;
+
+    // Color de los copos
+    var snowColor = ["#FBC8C8", "#FBC8C8"];
+
+    // Forma de la nieve
+    var snowEntity = "&#x2740;";
+
+    // Velocidad mientras cae
+    var snowSpeed = 0.50;
+
+    // Tamaño minimo de los copos
+    var snowMinSize = 8;
+
+    // Tamaño maximo de los copos
+    var snowMaxSize = 30;
+
+    // Velocidad de refrescamiento (en milliseconds)
+    var snowRefresh = 50;
+
+    // Estilo adicional
+    var snowStyles = "cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;";
+
+    /*
+    // Fin de la configuración
+    // ----------------------------------------
+    // No modifiques a partir de esta linea
+    */
+
+    var snow = [],
+    	pos = [],
+    	coords = [],
+    	lefr = [],
+    	marginBottom,
+    	marginRight;
+
+    function randomise(range) {
+    	rand = Math.floor(range * Math.random());
+    	return rand;
+    }
+
+    function initSnow() {
+    	var snowSize = snowMaxSize - snowMinSize;
+    	marginBottom = document.body.scrollHeight - 5;
+    	marginRight = document.body.clientWidth - 15;
+
+    	for (i = 0; i <= snowMax; i++) {
+    		coords[i] = 0;
+    		lefr[i] = Math.random() * 15;
+    		pos[i] = 0.03 + Math.random() / 10;
+    		snow[i] = document.getElementById("flake" + i);
+    		snow[i].style.fontFamily = "inherit";
+    		snow[i].size = randomise(snowSize) + snowMinSize;
+    		snow[i].style.fontSize = snow[i].size + "px";
+    		snow[i].style.color = snowColor[randomise(snowColor.length)];
+    		snow[i].style.zIndex = 1000;
+    		snow[i].sink = snowSpeed * snow[i].size / 5;
+    		snow[i].posX = randomise(marginRight - snow[i].size);
+    		snow[i].posY = randomise(2 * marginBottom - marginBottom - 2 * snow[i].size);
+    		snow[i].style.left = snow[i].posX + "px";
+    		snow[i].style.top = snow[i].posY + "px";
+    	}
+
+    	moveSnow();
+    }
+
+    function resize() {
+    	marginBottom = document.body.scrollHeight - 5;
+    	marginRight = document.body.clientWidth - 15;
+    }
+
+    function moveSnow() {
+    	for (i = 0; i <= snowMax; i++) {
+    		coords[i] += pos[i];
+    		snow[i].posY += snow[i].sink;
+    		snow[i].style.left = snow[i].posX + lefr[i] * Math.sin(coords[i]) + "px";
+    		snow[i].style.top = snow[i].posY + "px";
+
+    		if (snow[i].posY >= marginBottom - 2 * snow[i].size || parseInt(snow[i].style.left) > (marginRight - 3 * lefr[i])) {
+    			snow[i].posX = randomise(marginRight - snow[i].size);
+    			snow[i].posY = 0;
+    		}
+    	}
+
+    	setTimeout("moveSnow()", snowRefresh);
+    }
+
+    for (i = 0; i <= snowMax; i++) {
+    	document.write("<span id='flake" + i + "' style='" + snowStyles + "position:absolute;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
+    }
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('load', initSnow);
+    </script>
+    <script type="text/javascript">
+      window.addEventListener('scroll',function(){
+        var header=document.querySelector('header')
+        header.classList.toggle('sticky', window.scrollY>0)
+      });
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
     var swiper = new Swiper('.swiper-container', {
@@ -74,4 +212,5 @@
     });
   </script>
   </body>
+  <footer>footer</footer>
 </html>

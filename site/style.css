@@ -1,24 +1,242 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
 *
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Dancing Script', cursive;
 }
-body
+section{
+  padding: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+section div.textBx
 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: black;
+text-align: center;
+align-items: center;
+margin-left: 400px;
+margin-top: 100px;
+
+
 }
-.testimonios
+
+                          /*------->BANNER<------*/
+.banner:hover
+{
+  background-color: #F08080;
+}
+.banner
+{
+
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url(flor4.jpg);
+  background-repeat: no-repeat;
+  background-color: #F08080;
+
+
+}
+.banner h6
+{
+  font-size: 3em;
+  color: #F08080;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.banner h6 span
+{
+  font-size: 3.5em;
+  font-weight: 700;
+}
+.banner h7
+{
+  font-size: 3.5em;
+  color: #F08080;
+  font-weight: 500;
+
+}
+.btn
 {
   position: relative;
+  background: #F08080;
+  display: inline-block;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-radius: 60%;
+
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0007);
+
+  animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+  100%
+  {
+    color:#F08080;
+    box-shadow: none;
+    border-radius: 60%;
+  }
+  100%
+  {
+    color:#fff;
+    border-radius: 60%;
+
+    box-shadow: 0 0 10px #F9B6B6,
+                0 0 20px #F9B6B6,
+                0 0 40px #F9B6B6,
+                0 0 80px #F9B6B6,
+                0 0 100px #F08080;
+
+
+  }
+}
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky
+{
+  background: #fff;
+  padding: 20px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+header.sticky .logo
+{
+  color:black;
+}
+header .logo
+{
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  font-size: 1.5em;
+  letter-spacing: 15px;
+  color: #F08080;
+
+  text-align: center;
+
+}
+header ul
+{
+  position: relative;
+  display: flex;
+}
+header ul li
+{
+  position: relative;
+  list-style: none;
+
+}
+header ul li a
+{
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  color: #111;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+
+}
+header.sticky ul li a
+{
+  color: black;
+}
+.heading
+{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+.heading h2
+{
+  font-weight: 600;
+  font-size: 30px;
+}
+.w50
+{
+  max-width: 50%;
+}
+.img
+{
   max-width: 100%;
-  -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+
+}
+.info
+{
+  display: flex;
+  justify-content: space-between;
+}
+.infoBx
+{
+  padding-right: 30px;
+}
+.infoBx p
+{
+  font-size: 26px;
+  text-align: justify;
+
+}
+.infoBx h2
+{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+footer
+{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  color: black;
+  top: 100px;
+}
+
+body
+{
+
+  justify-content: center;
+  align-items: center;
+  min-height: 1000px;
+  background: white;
+
+}
+
+                          /* ---->SLIDERS<---- */
+.testimonios
+{
+
+  position: relative;
+  max-width: 100%;
+
 
 }
 
@@ -42,22 +260,12 @@ body
   position: relative;
   width: 100%;
   margin: 0 auto;
-  background: #333;
+  background: #fff;
   text-align: center;
   padding: 60px 40px;
   overflow: hidden;
 }
-.testimonios .card .layer
-{
-  position: absolute;
-  top: calc(100% - 2px);
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#03a9f4, #e91ee3);
-  z-index: 1;
-  transition: 0.5s;
-}
+
 .testimonios .card:hover .layer
 {
   top: 0;
@@ -69,42 +277,29 @@ body
   z-index: 2;
 }
 
-.testimonios .card .content p
+.testimonios .card .content p span
 {
-  font-size: 18px;
+  font-size: 23px;
   line-height: 24px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #111;
 }
-.testimonios .card .content .imgBx
+.testimonios .card .content p
 {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow:hidden;
-  border: 4px solid #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 23px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: #111;
 }
-.testimonios .card .content h2
-{
-  font-size: 18px;
-  color: #fff;
-}
+
 .testimonios .card .content h2 span
 {
-  color: #03a9f4;
-  font-size: 14px;
+  font-weight: bold;
+  color: #F08080;
+  font-size: 28px;
   transition: 0.5s;
 }
 .testimonios .card:hover .content h2 span
 {
-  color: #fff;
-
-}
-
-#img1
-{
-  width: 100px;
-  height: 100px;
+  color: #111;
 }
