@@ -9,7 +9,7 @@
 
 
   <body>
-    <audio autoplay>
+    <audio autoplay controls hidden preload="auto">
       <source src="donna.mp3" type="audio/mp3">
 
     </audio>
@@ -17,36 +17,100 @@
       <a contenteditable="true" href="#" class="logo">Florecita</a>
       <div class="toggle"></div>
       <ul>
-        <li><a href="#">Inicio</a><li>
-        <li><a href="#">Acerca de mi</a><li>
-        <li><a href="#">Productos</a><li>
-        <li><a href="#">Opiniones</a><li>
+        <li><a href="#banner">Inicio</a><li>
+        <li><a href="#sobremi">Acerca de</a><li>
+        <li><a href="#productos">Productos</a><li>
+        <li><a href="#comentarios">Opiniones</a><li>
       </ul>
     </header>
-    <section class="banner">
+    <section class="banner" id="banner">
       <div class="textBx">
         <h6>Bienvenidos!<br><span></span></h6>
         <h7>FLORECITA</h7><br>
-        <a href="#" class="btn">Sobre mi</a>
+        <a href="#sobremi" class="btn">About us</a>
       </div>
     </section>
-    <section class="sobremi">
+    <section class="sobremi" id="sobremi">
       <div class="heading">
-        <h2>Acerca de</h2>
+        <h2 class="tex2"><span>A</span>cerca de</h2>
       </div>
       <div class="info">
-        <div class="infoBx w50">
-          <h2>Florecita</h2>
+        <div class="infoBx">
+          <h2 class="tex"><span>F</span>lorecita</h2>
           <p>Mi pasión es aprender nuevas cosas en plataformas e-learning, la mayoría de cosas sobre tecnología que se ahora las aprendí por ser autodidacta.<br><br>Estoy a pocos pasos de volverme un programador, paso mi tiempo aprendiendo nuevos lenguajes de progrmación como Python, CSS, Javascript, entre otros.</p>
         </div>
-        <div class="w50">
-          <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-
-          </video>
+        <div class="infoBx">
+          <div class="vidBx">
+            <video src="zoom.mp4" controls preload="auto">
+            </video>
+          </div>
         </div>
       </div>
     </section>
-    <section class="sliders1" id="sliders1">
+
+    <section class="sliders1" id="productos">
+      <div class="testimonios">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="imgBx">
+                    <img id="vestido1" src="blusa.jpg">
+                  </div>
+                  <div class="details">
+                    <h2>Blusa<br><span>Precio</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="imgBx">
+                    <img id="blusa1"src="vestido.jpg">
+                  </div>
+                  <div class="details">
+                    <h2>Vestido<br><span>Precio</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="imgBx">
+                    <img src="">
+                  </div>
+                  <div class="details">
+                    <h2>Jean<br><span>Precio</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="layer"></div>
+                <div class="content">
+                  <div class="imgBx">
+                    <img id="short1" src="short.jpg">
+                  </div>
+                  <div class="details">
+                    <h2>Short<br><span>Precio</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sliders1" id="comentarios">
       <div class="heading">
         <h2>Ellas opinan de nosotros</h2>
       </div>
@@ -197,6 +261,23 @@
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+    var swiper1 = new Swiper('.swiper-container1', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+
+    });
+  </script>
+    <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,
@@ -214,5 +295,4 @@
     });
   </script>
   </body>
-  <footer>footer</footer>
 </html>

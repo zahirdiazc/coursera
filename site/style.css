@@ -7,6 +7,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Dancing Script', cursive;
+  scroll-behavior: smooth;
+}
+body
+{
+  min-height: 1000px;
 }
 section{
   padding: 100px;
@@ -14,49 +19,32 @@ section{
   margin-right: 50px;
 
 }
-
-section div.textBx
-{
-text-align: center;
-align-items: center;
-
-
-
-}
-
                           /*------->BANNER<------*/
-.banner:hover
-{
-  background-color: #fff;
-}
+
 .banner
 {
-
   position: relative;
-  height: 660px;
+  min-height: 100vh;
   background-size: cover;
   background-position: right;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: url(flor4.jpg);
-  background-repeat: no-repeat;
-
-
-
 }
-.banner h6
+.banner .textBx
+{
+  max-width: 900px;
+  text-align: center;
+}
+.banner .textBx h6
 {
   font-size: 3em;
   color: #F08080;
   font-weight: 500;
   line-height: 1.5em;
 }
-.banner h6 span
-{
-  font-size: 3.5em;
-  font-weight: 700;
-}
+
 .banner h7
 {
   font-size: 3.5em;
@@ -66,18 +54,17 @@ align-items: center;
 }
 .btn
 {
-  position: relative;
   background: #F08080;
   display: inline-block;
   color: #fff;
   margin-top: 20px;
   padding: 10px 30px;
-  font-size: 18px;
+  font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
-  font-weight: 500;
-  border-radius: 60%;
+  border-radius: 50%;
+
 
   -webkit-box-reflect: below 1px linear-gradient(transparent,#0007);
 
@@ -89,21 +76,21 @@ align-items: center;
   {
     color:#F08080;
     box-shadow: none;
-    border-radius: 60%;
+
   }
   100%
   {
     color:#fff;
-    border-radius: 60%;
-
     box-shadow: 0 0 10px #F9B6B6,
                 0 0 20px #F9B6B6,
                 0 0 40px #F9B6B6,
                 0 0 80px #F9B6B6,
                 0 0 100px #F08080;
-
-
   }
+}
+.btn:hover
+{
+  letter-spacing: 3px;
 }
 header
 {
@@ -112,7 +99,7 @@ header
   left: 0;
   width: 100%;
   padding:40px 100px;
-  z-index: 1000;
+  z-index: 10000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,17 +117,20 @@ header.sticky .logo
 }
 header .logo
 {
-  text-transform: uppercase;
+
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 2px;
-  position: relative;
   font-size: 1.5em;
-  letter-spacing: 15px;
+  letter-spacing: 7px;
   color: #F08080;
 
   text-align: center;
 
+}
+header .logo:hover
+{
+  letter-spacing: 10px;
 }
 header ul
 {
@@ -152,6 +142,10 @@ header ul li
   position: relative;
   list-style: none;
 
+}
+header ul li:hover a
+{
+  letter-spacing: 2px;
 }
 header ul li a
 {
@@ -174,29 +168,70 @@ header.sticky ul li a
   text-align: center;
   margin-bottom: 30px;
   color: #111;
+
 }
 .heading h2
 {
   font-weight: 600;
   font-size: 30px;
 }
-.w50
-{
-  min-width: 50%;
-}
+
 video
 {
   max-width: 100%;
+  flex-direction: column;
 
 }
 .info
 {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 .infoBx
 {
   padding-right: 30px;
+
+
+}
+.info .infoBx
+{
+  position: relative;
+  width: 100%;
+
+}
+
+
+.tex2 span
+{
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #F08080;
+}
+.tex span
+{
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #F08080;
+
+}
+.info .infoBx .vidBx
+{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+}
+.info .infoBx .vidBx video
+{
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+  justify-content: center;
+
 }
 .infoBx p
 {
@@ -209,6 +244,7 @@ video
   font-size: 32px;
   margin-bottom: 10px;
 }
+
 footer
 {
   position: relative;
@@ -219,17 +255,9 @@ footer
   top: 100px;
 }
 
-body
-{
 
-  justify-content: center;
-  align-items: center;
-  min-height: 1000px;
-  background: white;
 
-}
-
-                          /* ---->SLIDERS<---- */
+                          /* ---->TESTIMONIOS<---- */
 .testimonios
 {
 
@@ -301,4 +329,32 @@ body
 .testimonios .card:hover .content h2 span
 {
   color: #111;
+}
+
+                                /*CATALOGO*/
+.testimonios .card .content .imgBx
+{
+  height: 300px;
+  width: 250px;
+  margin-bottom: 50px;
+  radius: 50px;
+}
+#blusa1
+{
+  height: 300px;
+  width: 250px;
+}
+#vestido1
+{
+  height: 300px;
+  width: 250px;
+}
+#short1
+{
+  height: 300px;
+  width: 250px;
+}
+#comentarios
+{
+  height: 300px;
 }
