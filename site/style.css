@@ -27,13 +27,13 @@ align-items: center;
                           /*------->BANNER<------*/
 .banner:hover
 {
-  background-color: #F08080;
+  background-color: #fff;
 }
 .banner
 {
 
   position: relative;
-  min-height: 100vh;
+  height: 660px;
   background-size: cover;
   background-position: right;
   display: flex;
@@ -182,9 +182,9 @@ header.sticky ul li a
 }
 .w50
 {
-  max-width: 50%;
+  min-width: 50%;
 }
-.img
+video
 {
   max-width: 100%;
 
