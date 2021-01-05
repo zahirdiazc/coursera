@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 
-
   <body>
     <audio autoplay controls hidden preload="auto">
       <source src="donna.mp3" type="audio/mp3">
@@ -15,12 +14,12 @@
     </audio>
     <header>
       <a contenteditable="true" href="#" class="logo">Florecita</a>
-      <div class="toggle"></div>
-      <ul>
-        <li><a href="#banner">Inicio</a><li>
-        <li><a href="#sobremi">Acerca de</a><li>
-        <li><a href="#productos">Productos</a><li>
-        <li><a href="#comentarios">Opiniones</a><li>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="menu">
+        <li><a href="#banner" onclick="toggleMenu();">Inicio</a><li>
+        <li><a href="#sobremi" onclick="toggleMenu();">Acerca de</a><li>
+        <li><a href="#productos" onclick="toggleMenu();">Productos</a><li>
+        <li><a href="#comentarios" onclick="toggleMenu();">Opiniones</a><li>
       </ul>
     </header>
     <section class="banner" id="banner">
@@ -49,6 +48,9 @@
     </section>
 
     <section class="sliders1" id="productos">
+      <div class="heading">
+        <h2><span>P</span>roductos</h2>
+      </div>
       <div class="testimonios">
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -112,7 +114,7 @@
 
     <section class="sliders1" id="comentarios">
       <div class="heading">
-        <h2>Ellas opinan de nosotros</h2>
+        <h2><span>E</span>llas opinan de nosotros</h2>
       </div>
       <div class="testimonios">
         <div class="swiper-container">
@@ -293,6 +295,15 @@
       loop: true,
 
     });
+    function toggleMenu(){
+      var menuToggle = document.querySelector('.toggle');
+      var menu = document.querySelector('.menu');
+      menuToggle.classList.toggle('active')
+      menu.classList.toggle('active')
+    }
   </script>
   </body>
+  <footer>
+    Copyright 2020 ©. All Rights Reserved.
+  </footer>
 </html>
