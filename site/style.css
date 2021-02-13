@@ -14,6 +14,8 @@
 body
 {
   min-height: 1000px;
+  margin-left: 50px;
+  margin-right: 50px;
 
 }
 ::-webkit-scrollbar
@@ -35,9 +37,6 @@ body
 
 section{
   padding: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
-
 }
                           /*------->BANNER<------*/
 
@@ -45,12 +44,26 @@ section{
 {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   background-size: cover;
   background-position: right;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: url(flor4.jpg);
+  background: url(moda.jpg);
+  animation:  2s infinite;
+
+}
+@keyframes pulse {
+
+} pulse {
+  50%{
+    transform: scale(3);
+  }
+  100%{
+    transition: scale(4);
+  }
+
 }
 .banner .textBx
 {
@@ -83,12 +96,7 @@ section{
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
-  border-radius: 50%;
 
-
-  -webkit-box-reflect: below 1px linear-gradient(transparent,#0007);
-
-  animation: animate 5s linear infinite;
 }
 @keyframes animate
 {
@@ -135,16 +143,17 @@ header.sticky .logo
 {
   color:black;
 }
+
 header .logo
 {
 
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 2px;
-  font-size: 1.5em;
+  font-size: 2.0em;
   letter-spacing: 7px;
-  color: #F08080;
-
+  color: #fff;
+  font-family: roboto,sans-serif;
   text-align: center;
 
 }
@@ -157,6 +166,12 @@ header ul
   position: relative;
   display: flex;
 }
+.logo
+{
+
+  display: flex;
+}
+
 header ul li
 {
   position: relative;
@@ -257,6 +272,15 @@ video
   height: 300px;
   object-fit: cover;
   justify-content: center;
+  animation: ease-in animat 7s;
+}
+@keyframes animat {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1);
+  }
 
 }
 .infoBx p
@@ -394,11 +418,77 @@ video
 
 footer
 {
+  margin-top: 30px;
   text-align: center;
   font-size: 18px;
   background-color: #f8d8dd;
   color: black;
 }
+.social
+{
+  margin-left: 400px;
+}
+.social ul
+{
+  position: relative;
+  display: flex;
+}
+.social ul li
+{
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.social ul li a
+{
+  text-decoration: none;
+}
+.social ul li a .fa
+{
+  font-size: 4em;
+  color: #f8d8dd;
+}
+.social ul li::before
+{
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 4em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.social ul li:nth-child(1)::before
+{
+  content: '\f09a';
+  color: blue;
+}
+.social ul li:hover::before
+{
+  height: 100%;
+}
+.social ul li:nth-child(2)::before
+{
+  content: '\f16d';
+  color: orangered;
+}
+.social ul li:hover::before
+{
+  height: 100%;
+}
+.social ul li:nth-child(3)::before
+{
+  content: '\f232';
+  color: #25d366;
+}
+.social ul li:hover::before
+{
+  height: 100%;
+}
+
+
 
                           /*RESPONSIVE*/
 
@@ -464,19 +554,21 @@ footer
   {
     font-size: 2em;
   }
+
   .toggle
   {
     width: 30px;
     height: 30px;
-    background: url("menu.png");
+    background: url("https://img.icons8.com/color/48/000000/menu--v1.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: : 30px;
+    background-size: 30px;
     cursor: pointer;
+
   }
   .toggle.active
   {
-    background: url("close.png");
+    background: url("https://img.icons8.com/fluent-systems-regular/48/000000/x.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25px;
@@ -486,6 +578,11 @@ footer
   header.sticky .toggle
   {
     filter: invert(70%);
+  }
+  header .logo
+  {
+    font-size: 1.5em;
+    margin-left: 20px;
   }
   .info
   {
@@ -516,6 +613,33 @@ footer
     justify-content: center;
 
 }
+
+footer
+{
+  margin-top: 70px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #f8d8dd;
+  color: black;
+}
+.social
+{
+
+  margin-left: 0px;
+}
+.social ul li a .fa
+{
+  font-size: 1.5em;
+  color: #F08080;
+  margin-left: 30px;
+}
+.social ul li::before
+{
+  font-size: 1.5em;
+  margin-left: 30px;
+}
+
+
 @media (max-width: 600px)
 {
   header,
@@ -524,4 +648,12 @@ footer
     padding:  20px 20px;
 
   }
+
 }
+/* ----------> CHATBOT <---------- */
+
+
+
+
+
+/*-------->NEW PROJECT<-------------- */
